@@ -114,6 +114,7 @@ on:
           - rock-5-itx
           - rock5b
           - rock5c
+          - rock5t
           - ruisen-box
           - s905
           - s905-beelink-mini
@@ -435,7 +436,7 @@ jobs:
 
       - name: Package FnNAS for target boards
         if: ${{ steps.down.outputs.status == 'success' && !cancelled() }}
-        uses: ophub/fnnas@main
+        uses: ./
         with:
           fnnas_path: fnnas/*.img.xz
           fnnas_board: ${{ inputs.fnnas_board }}
