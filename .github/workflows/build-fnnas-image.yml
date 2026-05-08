@@ -270,6 +270,9 @@ on:
           - angel
           - yourname
 
+permissions:
+  contents: write
+
 env:
   TZ: Etc/UTC
 
